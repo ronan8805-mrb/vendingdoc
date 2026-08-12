@@ -30,16 +30,21 @@ const STEPS = [
 
 export function HowItWorks() {
   return (
-    <section id="how" className="section relative overflow-hidden bg-navy text-fg">
+    <section id="how" className="section relative overflow-hidden text-fg">
+      {/* Unified cool gradient — no split panel */}
       <div
-        className="pointer-events-none absolute inset-y-0 right-0 w-1/2 opacity-20"
-        style={{
-          backgroundImage: "url(/images/metal-wash.jpg)",
-          backgroundSize: "cover",
-          backgroundPosition: "center",
-        }}
+        className="absolute inset-0 bg-linear-to-br from-[#0a1220] via-navy to-[#0d1829]"
         aria-hidden
       />
+      <div
+        className="pointer-events-none absolute inset-0 bg-linear-to-t from-ink/40 via-transparent to-transparent"
+        aria-hidden
+      />
+      <div
+        className="pointer-events-none absolute -right-1/3 top-1/4 size-[70%] rounded-full bg-silver/[0.06] blur-3xl"
+        aria-hidden
+      />
+
       <div className="wrap relative">
         <Reveal>
           <p className="eyebrow text-silver">How it works</p>
