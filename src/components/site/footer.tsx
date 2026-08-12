@@ -40,10 +40,10 @@ export function SiteFooter() {
             <div>
               <p className="eyebrow text-steel">Contact</p>
               <a
-                href="mailto:hello@vendingdoc.ie"
+                href="mailto:admin@vendingdoc.com"
                 className="mt-4 inline-block text-sm text-silver transition-colors duration-150 hover:text-fg"
               >
-                hello@vendingdoc.ie
+                admin@vendingdoc.com
               </a>
               <p className="mt-3 text-sm text-fg-muted">Ireland</p>
             </div>

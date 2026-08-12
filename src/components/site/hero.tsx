@@ -11,8 +11,8 @@ export function Hero() {
       <div className="absolute inset-0 overflow-hidden">
         <img
           src="/images/hero-gym.jpg"
-          alt=""
-          className="size-full object-cover object-[68%_center] outline-none"
+          alt="Member with a freshly mixed Vending Doc protein shake"
+          className="size-full object-cover object-[72%_center] outline-none"
         />
         <div
           className="absolute inset-0 bg-linear-to-r from-ink via-ink/84 to-ink/30"

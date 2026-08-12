@@ -86,7 +86,7 @@ export function RequestForm() {
       setDone(true);
     } catch {
       setFail(
-        "Something went wrong sending this. Please try again, or email hello@vendingdoc.ie.",
+        "Something went wrong sending this. Please try again, or email admin@vendingdoc.com.",
       );
     }
   }
