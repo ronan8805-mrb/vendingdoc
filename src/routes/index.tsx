@@ -23,8 +23,8 @@ function Home() {
         <div className="bg-ink">
           <img
             src="/images/drinks-line.jpg"
-            alt="A line of freshly mixed protein drinks"
-            className="h-52 w-full object-cover sm:h-72 lg:h-80"
+            alt="Vending Doc cups — freshly made protein shakes"
+            className="aspect-3/2 w-full object-cover object-center sm:aspect-[5/2]"
           />
         </div>
         <Products />

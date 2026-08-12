@@ -26,7 +26,7 @@ export function Members() {
         <div className="relative min-h-80 lg:min-h-full">
           <img
             src="/images/athlete.jpg"
-            alt="Athlete collecting a freshly mixed protein shake"
+            alt="Member with a freshly mixed Vending Doc protein shake"
             className="absolute inset-0 size-full object-cover object-center outline-none"
           />
         </div>

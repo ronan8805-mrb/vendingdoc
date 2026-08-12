@@ -5,7 +5,7 @@ const PRODUCTS = [
     name: "Pure Whey 100%",
     note: "Everyday whey. Full taste.",
     image: "/products/whey.jpg",
-    flavours: ["Chocolate Bueno", "Cookie & Cream", "Strawberry"],
+    flavours: ["Chocolate Bueno", "Cookies & Cream", "Strawberry"],
   },
   {
     name: "ISO Whey 100%",
@@ -23,7 +23,7 @@ const PRODUCTS = [
     name: "Creatine Monohydrate",
     note: "Exact dose. No grit ritual.",
     image: "/products/creatine.jpg",
-    flavours: ["Unflavoured", "Mixed into whey"],
+    flavours: ["Unflavoured", "Mixed Into Whey"],
   },
   {
     name: "Pre-Workout",
@@ -48,7 +48,7 @@ export function Products() {
           </p>
         </Reveal>
 
-        <div className="mt-14 grid gap-5 sm:grid-cols-2 lg:grid-cols-3">
+        <div className="mt-14 grid gap-5 sm:grid-cols-2">
           {PRODUCTS.map((product, i) => (
             <Reveal
               key={product.name}
@@ -57,7 +57,7 @@ export function Products() {
               className={i === 0 ? "sm:col-span-2 lg:col-span-1" : undefined}
             >
               <article className="group flex h-full flex-col overflow-hidden rounded-2xl bg-paper-warm shadow-card transition-[transform,box-shadow] duration-200 ease-out hover:-translate-y-1 hover:shadow-card-hover">
-                <div className="aspect-4/3 overflow-hidden bg-navy">
+                <div className="aspect-3/2 overflow-hidden bg-ink">
                   <img
                     src={product.image}
                     alt={product.name}

@@ -48,12 +48,12 @@ export function Problem() {
           <Reveal className="lg:col-span-5" delay={160} as="article">
             <div className="relative flex h-full min-h-72 flex-col justify-end overflow-hidden rounded-2xl bg-navy text-fg shadow-lift">
               <img
-                src="/images/shake-close.jpg"
-                alt=""
-                className="absolute inset-0 size-full object-cover outline-none"
+                src="/images/machine-gym.jpg"
+                alt="Gym members using a Vending Doc machine — fresh protein mixed on the floor"
+                className="absolute inset-0 size-full object-cover object-[center_35%] outline-none"
               />
               <div
-                className="absolute inset-0 bg-linear-to-t from-navy via-navy/80 to-navy/25"
+                className="absolute inset-0 bg-linear-to-t from-navy via-navy/85 to-navy/30"
                 aria-hidden
               />
               <div className="relative p-7 sm:p-8">
