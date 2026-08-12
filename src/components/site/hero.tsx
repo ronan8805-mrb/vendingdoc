@@ -12,7 +12,7 @@ export function Hero() {
         <img
           src="/images/hero-gym.jpg"
           alt="Member with a freshly mixed Vending Doc protein shake"
-          className="size-full object-cover object-[72%_center] outline-none"
+          className="size-full object-cover object-[38%_28%] outline-none"
         />
         <div
           className="absolute inset-0 bg-linear-to-r from-ink via-ink/84 to-ink/30"
