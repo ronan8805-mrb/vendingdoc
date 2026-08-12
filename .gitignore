@@ -1,0 +1,23 @@
+node_modules
+dist
+.output
+.vercel
+.nitro
+.tanstack
+.cache
+*.local
+.env
+.env.*
+!.env.example
+
+# Local / builder
+.grok
+artifacts
+attachments
+screenshots
+.node_modules.lock
+
+# Logs & OS
+*.log
+.DS_Store
+Thumbs.db

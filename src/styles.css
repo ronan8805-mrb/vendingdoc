@@ -1,0 +1,202 @@
+@import "tailwindcss";
+
+@theme {
+  --color-ink: #070b12;
+  --color-navy: #0c1624;
+  --color-navy-mid: #152338;
+  --color-navy-soft: #1c2d45;
+  --color-paper: #f3f4f6;
+  --color-paper-warm: #eceef1;
+  --color-fg: #f3f5f8;
+  --color-fg-muted: #9aa3af;
+  --color-ink-soft: #1a2230;
+  --color-muted: #5c6674;
+  --color-silver: #c9d0d8;
+  --color-silver-bright: #e6eaf0;
+  --color-steel: #8b95a3;
+  --color-line: rgb(243 245 248 / 0.12);
+  --color-line-strong: rgb(243 245 248 / 0.22);
+  --color-line-ink: rgb(12 18 32 / 0.1);
+  --color-accent: #d7dde5;
+  --color-accent-fg: #0a1220;
+
+  --font-display: "Outfit", "Avenir Next", "Segoe UI", sans-serif;
+  --font-sans: "Source Sans 3", "Source Sans Pro", "Segoe UI", sans-serif;
+
+  --text-micro: 0.6875rem;
+  --text-micro--line-height: 1.3;
+  --text-micro--letter-spacing: 0.16em;
+  --text-xs: 0.75rem;
+  --text-xs--line-height: 1.4;
+  --text-sm: 0.9375rem;
+  --text-sm--line-height: 1.55;
+  --text-base: 1.0625rem;
+  --text-base--line-height: 1.6;
+  --text-lg: 1.1875rem;
+  --text-lg--line-height: 1.5;
+  --text-xl: clamp(1.35rem, 1.1rem + 0.8vw, 1.65rem);
+  --text-xl--line-height: 1.25;
+  --text-2xl: clamp(1.75rem, 1.2rem + 1.6vw, 2.35rem);
+  --text-2xl--line-height: 1.12;
+  --text-3xl: clamp(2.15rem, 1.3rem + 2.6vw, 3.25rem);
+  --text-3xl--line-height: 1.05;
+  --text-display: clamp(3.15rem, 2.1rem + 5.4vw, 5.5rem);
+  --text-display--line-height: 0.94;
+  --text-display--letter-spacing: -0.036em;
+
+  --radius-xs: 0.25rem;
+  --radius-sm: 0.5rem;
+  --radius-md: 0.75rem;
+  --radius-lg: 1rem;
+  --radius-xl: 1.5rem;
+  --radius-2xl: 2rem;
+
+  --shadow-card: 0 0 0 1px rgb(12 18 32 / 0.06), 0 1px 2px rgb(12 18 32 / 0.04),
+    0 18px 40px -24px rgb(12 18 32 / 0.35);
+  --shadow-card-hover: 0 0 0 1px rgb(12 18 32 / 0.08), 0 8px 28px -16px rgb(12 18 32 / 0.4);
+  --shadow-dark: 0 0 0 1px rgb(243 245 248 / 0.08);
+  --shadow-lift: 0 24px 60px -28px rgb(0 0 0 / 0.55);
+
+  --ease-smooth-out: cubic-bezier(0.22, 1, 0.36, 1);
+  --ease-out: cubic-bezier(0.23, 1, 0.32, 1);
+}
+
+@layer base {
+  html {
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    scroll-behavior: smooth;
+    scroll-padding-top: 5.5rem;
+    background: var(--color-ink);
+    color: var(--color-fg);
+  }
+
+  body {
+    font-family: var(--font-sans);
+    background: var(--color-ink);
+    color: var(--color-fg);
+    min-height: 100dvh;
+  }
+
+  h1,
+  h2,
+  h3,
+  h4 {
+    font-family: var(--font-display);
+    text-wrap: balance;
+    letter-spacing: -0.03em;
+  }
+
+  p {
+    text-wrap: pretty;
+  }
+
+  button:not(:disabled),
+  [role="button"]:not(:disabled) {
+    cursor: pointer;
+  }
+
+  ::selection {
+    background: var(--color-silver);
+    color: var(--color-navy);
+  }
+
+  img {
+    outline: 1px solid rgb(255 255 255 / 0.08);
+    outline-offset: -1px;
+  }
+
+  :focus-visible {
+    outline: 2px solid var(--color-silver);
+    outline-offset: 3px;
+  }
+}
+
+@layer components {
+  .wrap {
+    width: min(72rem, calc(100% - 2.5rem));
+    margin-inline: auto;
+  }
+
+  .wrap-wide {
+    width: min(80rem, calc(100% - 2.5rem));
+    margin-inline: auto;
+  }
+
+  .section {
+    padding-block: clamp(4.5rem, 10vw, 8.5rem);
+  }
+
+  .eyebrow {
+    font-family: var(--font-display);
+    font-size: var(--text-micro);
+    font-weight: 500;
+    letter-spacing: 0.18em;
+    text-transform: uppercase;
+    color: var(--color-steel);
+  }
+
+  .reveal {
+    opacity: 0;
+    transform: translateY(18px);
+    filter: blur(6px);
+    transition:
+      opacity 700ms var(--ease-smooth-out),
+      transform 700ms var(--ease-smooth-out),
+      filter 700ms var(--ease-smooth-out);
+  }
+
+  .reveal-in {
+    opacity: 1;
+    transform: none;
+    filter: none;
+  }
+
+  .logo-float {
+    animation: logo-float 7s var(--ease-out) infinite;
+  }
+
+  .metal-sheen {
+    background:
+      radial-gradient(120% 80% at 80% 10%, rgb(201 208 216 / 0.12), transparent 50%),
+      radial-gradient(90% 60% at 10% 90%, rgb(28 45 69 / 0.7), transparent 55%);
+  }
+
+  .hairline {
+    height: 1px;
+    background: linear-gradient(
+      90deg,
+      transparent,
+      rgb(201 208 216 / 0.28),
+      transparent
+    );
+  }
+}
+
+@keyframes logo-float {
+  0%,
+  100% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(-10px);
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  html {
+    scroll-behavior: auto;
+  }
+
+  .reveal,
+  .reveal-in {
+    opacity: 1;
+    transform: none;
+    filter: none;
+    transition: none;
+  }
+
+  .logo-float {
+    animation: none;
+  }
+}
